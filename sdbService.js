@@ -20,10 +20,10 @@
     };
     _start();
     var getDb = function() {
-      return JSON.parse(localStorage.db);
+      return JSON.parse(localStorage[_dbName]);
     };
     var saveDb = function(arr) {
-      localStorage.db = JSON.stringify(arr);
+      localStorage[_dbName] = JSON.stringify(arr);
     };
     return {
       setDb: function(dbName) {
